@@ -54,3 +54,23 @@ console.log(`outside Scope value of b ${b}`); // global variable
 console.log(`outside Scope value of c ${c}`); // global vaariable but value got changed inside function scope.
 
 // NOTE: var is a global SCOPE whereas let and const is a block SCOPE
+
+// nested Function
+
+function one(){
+    const username = "Rohit" 
+    function two(){
+        const webSite = "Youtube"
+        console.log(username); // can access parent SCOPE 
+    }
+    // console.log(webSite); // cannot access child SCOPE  
+    two()
+}
+one()
+
+// Arrow Functions
+ const printName = () => {console.log("My name is Rohit PRadhan");
+ }
+ printName()
+ const addTWo = (x,y) => x+y
+console.log( addTWo(1,2))
