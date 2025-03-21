@@ -69,8 +69,18 @@ function one(){
 one()
 
 // Arrow Functions
- const printName = () => {console.log("My name is Rohit PRadhan");
+ const printName = () => {console.log("My name is Rohit Pradhan");
  }
  printName()
  const addTWo = (x,y) => x+y
-console.log( addTWo(1,2))
+console.log( addTWo(1,2));
+
+// immediatly invoked Function Expression (IIFE)
+(function sayHello(){
+    console.log("Hello");
+})();
+
+// Passing argument in IIFE
+((name) =>{
+console.log(`Hello ${name}`);
+})("Rohit");
